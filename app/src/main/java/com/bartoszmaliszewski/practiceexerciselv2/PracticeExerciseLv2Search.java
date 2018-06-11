@@ -1,7 +1,6 @@
 package com.bartoszmaliszewski.practiceexerciselv2;
 
 import android.app.Dialog;
-import android.content.Intent;
 import android.database.Cursor;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
@@ -18,7 +17,6 @@ import android.support.v7.widget.Toolbar;
 import android.widget.Toast;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class PracticeExerciseLv2Search extends AppCompatActivity {
 
@@ -45,7 +43,7 @@ public class PracticeExerciseLv2Search extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_practice_exercise_lv2_search);
+        setContentView(R.layout.activity_practice_exercise_lv2_search2);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         // setSupportActionBar(toolbar);

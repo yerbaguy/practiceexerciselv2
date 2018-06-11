@@ -12,7 +12,7 @@
 
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.bartoszmaliszewski.practiceexerciselv2.PracticeExerciseLv2"
-    tools:showIn="@layout/activity_practice_exercise_lv2_search">
+    tools:showIn="@layout/activity_practice_exercise_lv2">
 
     <android.support.v7.widget.SearchView
         android:id="@+id/sv"

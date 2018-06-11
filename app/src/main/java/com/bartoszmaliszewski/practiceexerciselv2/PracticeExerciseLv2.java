@@ -44,7 +44,7 @@ public class PracticeExerciseLv2 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_practice_exercise_lv2_search);
+        setContentView(R.layout.activity_practice_exercise_lv2);
 
 
 
