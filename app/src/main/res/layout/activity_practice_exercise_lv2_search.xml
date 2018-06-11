@@ -1,0 +1,114 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context="com.bartoszmaliszewski.practiceexerciselv2.PracticeExerciselv2Search"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnPullTheWord"
+            android:layout_width="166dp"
+            android:layout_height="52dp"
+            android:text="Pull The Word"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="16dp"/>
+
+        <TextView
+            android:id="@+id/textViewPulledTheWord"
+            android:layout_width="288dp"
+            android:layout_height="41dp"
+            android:text="TextView"
+            tools:layout_editor_absoluteX="186dp"
+            tools:layout_editor_absoluteY="22dp"
+            android:layout_weight="0.00"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewRandom"
+        android:layout_width="73dp"
+        android:layout_height="wrap_content"
+        android:text="TextView"/>
+
+    <TextView
+        android:id="@+id/textViewRandPl"
+        android:layout_width="73dp"
+        android:layout_height="wrap_content"
+        android:text="TextView"/>
+
+    <TextView
+        android:id="@+id/textViewAnotherUpdate"
+        android:layout_width="72dp"
+        android:layout_height="wrap_content"
+        android:text="TextView"/>
+
+    <TextView
+        android:id="@+id/textViewIdOfEngWord"
+        android:layout_width="71dp"
+        android:layout_height="wrap_content"
+        android:text="TextView"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnSupport"
+            android:layout_width="151dp"
+            android:layout_height="wrap_content"
+            android:text="Support"/>
+
+        <TextView
+            android:id="@+id/textViewSupport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.15"
+            android:text="TextView"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewTypedEngWord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.09"
+        android:text="TextView"/>
+
+    <EditText
+        android:id="@+id/editTextEnglishWord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"/>
+
+    <Button
+        android:id="@+id/btnSubmitEngWord"
+        android:layout_width="199dp"
+        android:layout_height="59dp"
+        android:text="Submit"/>
+
+    <TextView
+        android:id="@+id/textViewAddWords"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Words"/>
+
+    <TextView
+        android:id="@+id/textViewShowWord"
+        android:layout_width="84dp"
+        android:layout_height="wrap_content"
+        android:text="Show Word"/>
+
+    <TextView
+        android:id="@+id/textViewTypedEnglishWord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.14"
+        android:text="TextView"/>
+
+</LinearLayout>
