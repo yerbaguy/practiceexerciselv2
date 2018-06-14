@@ -3,26 +3,25 @@ package com.bartoszmaliszewski.practiceexerciselv2;
 import android.app.Dialog;
 import android.content.Intent;
 import android.database.Cursor;
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.SearchView;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-//import android.widget.Toolbar;
-//import android.support.v7.widget.AppCompatButton;
-//import android.support.v7.widget.AppCompatEditText;
-import android.support.v7.widget.Toolbar;
-import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class PracticeExerciseLv2Search extends AppCompatActivity {
+//import android.widget.Toolbar;
+//import android.support.v7.widget.AppCompatButton;
+//import android.support.v7.widget.AppCompatEditText;
+
+public class PracticeExerciseLv2Searchh extends AppCompatActivity {
 
    DatabaseHelper databaseHelper;
 
@@ -37,26 +36,11 @@ public class PracticeExerciseLv2Search extends AppCompatActivity {
     SearchView sv;
     EditText engwordEditText, plwordEditText;
     TextView textViewPracticeExercise;
-    TextView idTextView, engWordTextView, plWordTextView;
     Button saveBtn, retrieveBtn;
-  //  CustomAdapter adapter;
-    SimpleCursorAdapter adapter;
-
-    String id, engword, plword;
-
+    CustomAdapter adapter;
     ArrayList<Word> words = new ArrayList<>();
 
-
-//    final String[] from = new String[] {databaseHelper._id, databaseHelper.engword, databaseHelper.plword};
-    final String[] from = new String[] {databaseHelper._id, databaseHelper.engword, databaseHelper.plword};
-
-
- //   final int[] to = new int[] {R.id.textViewId, R.id.textViewEngWord, R.id.textViewPlWord};
-    final int[] to = new int[] {R.id.textViewId, R.id.textViewEngWord, R.id.textViewPlWord};
-
-
-
-    // DatabaseHelper databaseHelper;
+   // DatabaseHelper databaseHelper;
 
 
 
@@ -79,7 +63,7 @@ public class PracticeExerciseLv2Search extends AppCompatActivity {
 
         textViewPracticeExercise = (TextView) findViewById(R.id.textViewPracticeExercise);
 
-       // adapter = new CustomAdapter(this, words);
+        adapter = new CustomAdapter(this, words);
 
         this.getWords(null);
 
@@ -184,60 +168,22 @@ public class PracticeExerciseLv2Search extends AppCompatActivity {
 
       //  Cursor c = db.retrieve(searchTerm);
 
-//        while (c.moveToNext()) {
-//
-//            int id = c.getInt(0);
-//            String engword = c.getString(1);
-//
-//            System.out.println(id);
-//            System.out.println(engword);
-//
-//            word = new Word();
-//            word.setId(id);
-//            word.setEngWord(engword);
-//
-//            words.add(word);
-//
-//            lv.setAdapter(adapter);
-//        }
+        while (c.moveToNext()) {
 
+            int id = c.getInt(0);
+            String engword = c.getString(1);
 
-        lv = (ListView) findViewById(R.id.lv);
-        lv.setEmptyView(findViewById(R.id.empty));
+            System.out.println(id);
+            System.out.println(engword);
 
-      //  adapter = new SimpleCursorAdapter(this, R.layout.activity_view_layout, c, from, to, 0);
-        adapter = new SimpleCursorAdapter(this, R.layout.activity_view_layout, c, from, to, 0);
+            word = new Word();
+            word.setId(id);
+            word.setEngWord(engword);
 
-        adapter.notifyDataSetChanged();
+            words.add(word);
 
-        lv.setAdapter(adapter);
-
-
-        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-
-                TextView idTextView = (TextView) view.findViewById(R.id.textViewId);
-                TextView engWordTextView = (TextView) view.findViewById(R.id.textViewEngWord);
-                TextView plWordTextView = (TextView) view.findViewById(R.id.textViewPlWord);
-
-                id = idTextView.getText().toString();
-                engword = engWordTextView.getText().toString();
-                plword = plWordTextView.getText().toString();
-
-                Intent modify_intent = new Intent(getApplicationContext(), ModifyWordListActivity.class);
-
-                modify_intent.putExtra("id", id);
-                modify_intent.putExtra("engword", engword);
-                modify_intent.putExtra("plword", plword);
-
-                startActivity(modify_intent);
-
-            }
-        });
-
-
-
+            lv.setAdapter(adapter);
+        }
 
 //        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 //            @Override
